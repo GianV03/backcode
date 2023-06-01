@@ -1,0 +1,19 @@
+.whatsapp-link{
+    position: fixed;
+    width: 3rem;
+    bottom:0;
+    right: 0;
+    cursor: pointer;
+    transform: translate(-10px, -15px);
+    -webkit-transform: translate(-10px, -15px);
+    -moz-transform: translate(-10px, -15px);
+    -ms-transform: translate(-10px, -15px);
+    -o-transform: translate(-10px, -15px);
+    z-index: 1000;
+}
+
+.whatsapp-button{
+    width: 100%;
+    cursor: pointer;
+    
+}

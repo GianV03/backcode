@@ -1,0 +1,101 @@
+.header{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 5.5rem;
+    position: fixed;
+    transition: top 1s;
+    z-index: 1000;
+    transition: background-color 1s;
+    -webkit-transition: background-color 1s;
+    -moz-transition: background-color 1s;
+    -ms-transition: background-color 1s;
+    -o-transition: background-color 1s;
+}
+
+.logo-section{
+    width: 150px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo-section img{
+    width: 60%;
+    transform: scale(.6);
+}
+
+.nav-section{
+    display: flex;
+    align-items: center;
+}
+
+.nav-section ul{
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    margin-right: 2rem;
+}
+
+.nav-section ul li{
+    margin-left: 1.5rem;
+
+}
+
+.nav-section ul li a{
+    text-decoration: none;
+    font-size: 1rem;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-section hr{
+    width: 100%;
+    background-color: rgb(128, 127, 127);
+}
+
+.menu-icon{
+    width: 3rem;
+    position: absolute;
+    display: none;
+    right: 1rem;
+    top: .5rem;
+    cursor:pointer;
+}
+
+
+ @media screen and (max-width:800px){
+
+    .nav-section{
+        position: absolute;
+        top:-20rem;
+        width: 100%;
+        justify-content: center;
+        background-color: inherit;
+        transition: top 1s;
+        -webkit-transition: top 1s;
+        -moz-transition: top 1s;
+        -ms-transition: top 1s;
+        -o-transition: top 1s;
+        z-index: -10;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+    .nav-section-show{
+        top:5rem;
+    }
+    .nav-section ul{
+        flex-flow: column nowrap;
+        width: 100%;
+    }
+
+    .nav-section ul li{
+        margin: 1rem 0 1rem 0;
+    }
+    
+    .menu-icon{
+        display: block;
+    }
+} 

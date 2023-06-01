@@ -1,0 +1,32 @@
+<shared-main-image></shared-main-image>
+  <div class="contact-us__main-section">
+    <h1>Contacta con nosotros</h1>
+    <div class="contact-us__main-container">
+        <div class="contact-us__form-section">
+            <form (ngSubmit)="onSubmit()" [formGroup]="contactForm">
+                <input type="text" placeholder="Nombre" name="name" formControlName="name">
+                <div class="alert-message" *ngIf="contactForm.get('name')?.touched && contactForm.get('name')?.errors?.['required']">*Este campo es requerido</div>
+                <input type="text" placeholder="Apellido" name="lastName" formControlName="lastName">
+                <div class="alert-message" *ngIf="contactForm.get('lastName')?.touched && contactForm.get('lastName')?.errors?.['required']">*Este campo es requerido</div>
+                <input type="text" placeholder="Teléfono" name="phone" formControlName="phone">
+                <div class="alert-message" *ngIf="contactForm.get('phone')?.touched && contactForm.get('phone')?.errors?.['required']">*Este campo es requerido</div>
+                <input type="mail" name="mail" placeholder="Correo" formControlName="mail">
+                <div class="alert-message" *ngIf="contactForm.get('mail')?.touched && contactForm.get('mail')?.errors?.['email']">*Ingresar un email válido</div>
+                <div class="alert-message" *ngIf="contactForm.get('mail')?.touched && contactForm.get('mail')?.errors?.['required']">*Este campo es requerido</div>
+                <textarea name="comment" formControlName="comment"></textarea>
+                <button type="submit" class="primary-button" [disabled]="contactForm.invalid"> <img src="/assets/icons/mail_FILL0_wght400_GRAD0_opsz48.png">Contactar</button>
+                <input type="hidden" name="_next" value="http://localhost:4200/contacto">
+                <input type="hidden" name="_captcha" value="false">
+            </form>
+
+        </div>
+        <div class="contact-us__info-section">
+            <h2><strong>Dirección:</strong> Somos una empresa 100% remota</h2>
+            <h2><strong>Teléfono:</strong> 9456676099</h2>
+            <button class="primary-button"><img src="/assets/icons/location_on_FILL0_wght400_GRAD0_opsz48.png">Ubícanos</button>
+        </div>
+    </div>
+    <div class="contact-us__map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3739.4365916797938!2d-79.84231205221928!3d-6.794798744529735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2spe!4v1684544930724!5m2!1ses-419!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>

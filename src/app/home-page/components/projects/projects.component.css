@@ -1,0 +1,29 @@
+
+.home-page_reasons-section{
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+
+
+
+
+.project_item{
+    width: 200px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    transition: opacity 1s;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    -o-transition: opacity 1s;
+}
+
+.project_item img{
+    width: 100%;
+}
+
+.project_item h3{
+    text-align: center;
+}

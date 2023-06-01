@@ -1,0 +1,54 @@
+.high-description-cards-container{
+    background-color: white;
+    
+}
+
+h1{
+    text-align: center;
+    color:#000;
+}
+
+.services_list_container{
+
+    margin-top: 3rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 100%;
+}
+
+
+.service_item{
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    width: 80%;
+    min-width: 350px;
+    margin: 1rem 0 1rem 0;
+}
+
+.service_item img{
+    flex: 1 1;
+    width: 45%;
+    min-width: 250px;
+}
+
+.service-description-wrapper{
+    flex: 1 1;
+    padding: 3rem;
+    min-width: 350px;
+}
+
+.service-description-wrapper h3{
+    color: #4b0973;
+}
+
+.service-description-wrapper p{
+    color: black;
+}
+
+@media  screen and (max-width:800px) {
+    .service-description-wrapper{
+        padding:0;
+    }
+}
