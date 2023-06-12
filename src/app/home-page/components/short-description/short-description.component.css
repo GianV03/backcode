@@ -39,11 +39,6 @@
     align-items: flex-start;
 }
 
-.short-description-section h1{
-    font-family: Arial, Helvetica, sans-serif;  /* Futura, Helvetica Neue, Gotham */
-    color:#000;  /* #254966 */
-}
-
 button{
     line-height: 3rem;
 }
@@ -55,6 +50,7 @@ button{
 
     .short-description__image-section{
         justify-content: center;
+        overflow: hidden;
     }
     .short-description-section{
         align-items: center;

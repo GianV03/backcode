@@ -1,19 +1,29 @@
 <shared-main-image></shared-main-image>
-  <div class="contact-us__main-section">
+  <div class="contact-us__main-section home-page__main-section">
     <h1>Contacta con nosotros</h1>
     <div class="contact-us__main-container">
         <div class="contact-us__form-section">
             <form (ngSubmit)="onSubmit()" [formGroup]="contactForm">
-                <input type="text" placeholder="Nombre" name="name" formControlName="name">
+                <mat-form-field>
+                    <input type="text" matInput placeholder="Nombre" name="name" formControlName="name">
+                </mat-form-field>
                 <div class="alert-message" *ngIf="contactForm.get('name')?.touched && contactForm.get('name')?.errors?.['required']">*Este campo es requerido</div>
-                <input type="text" placeholder="Apellido" name="lastName" formControlName="lastName">
+                <mat-form-field>
+                    <input type="text" matInput placeholder="Apellido" name="lastName" formControlName="lastName">
+                </mat-form-field>
                 <div class="alert-message" *ngIf="contactForm.get('lastName')?.touched && contactForm.get('lastName')?.errors?.['required']">*Este campo es requerido</div>
-                <input type="text" placeholder="Teléfono" name="phone" formControlName="phone">
+                <mat-form-field>
+                    <input type="text" matInput placeholder="Teléfono" name="phone" formControlName="phone">
+                </mat-form-field>
                 <div class="alert-message" *ngIf="contactForm.get('phone')?.touched && contactForm.get('phone')?.errors?.['required']">*Este campo es requerido</div>
-                <input type="mail" name="mail" placeholder="Correo" formControlName="mail">
+                <mat-form-field>
+                    <input type="mail" matInput name="mail" placeholder="Correo" formControlName="mail">
+                </mat-form-field>
                 <div class="alert-message" *ngIf="contactForm.get('mail')?.touched && contactForm.get('mail')?.errors?.['email']">*Ingresar un email válido</div>
                 <div class="alert-message" *ngIf="contactForm.get('mail')?.touched && contactForm.get('mail')?.errors?.['required']">*Este campo es requerido</div>
-                <textarea name="comment" formControlName="comment"></textarea>
+                <mat-form-field>
+                    <textarea name="comment" matInput formControlName="comment"></textarea>
+                </mat-form-field>
                 <button type="submit" class="primary-button" [disabled]="contactForm.invalid"> <img src="/assets/icons/mail_FILL0_wght400_GRAD0_opsz48.png">Contactar</button>
                 <input type="hidden" name="_next" value="http://localhost:4200/contacto">
                 <input type="hidden" name="_captcha" value="false">
@@ -22,7 +32,7 @@
         </div>
         <div class="contact-us__info-section">
             <h2><strong>Dirección:</strong> Somos una empresa 100% remota</h2>
-            <h2><strong>Teléfono:</strong> 9456676099</h2>
+            <h2><strong>Teléfono:</strong>+51917178912</h2>
             <button class="primary-button"><img src="/assets/icons/location_on_FILL0_wght400_GRAD0_opsz48.png">Ubícanos</button>
         </div>
     </div>

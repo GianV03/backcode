@@ -64,6 +64,7 @@
     right: 1rem;
     top: .5rem;
     cursor:pointer;
+    filter:invert(1);
 }
 
 

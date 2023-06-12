@@ -1,0 +1,14 @@
+
+
+.form-container{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.form-field{
+    width: 100%;
+}
+
+button{
+    width: 100%;
+}

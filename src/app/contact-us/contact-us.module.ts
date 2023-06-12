@@ -4,6 +4,7 @@ import { ContactUsComponent } from './contact-us.component';
 import { ContactUsRoutingModule } from './contact-us-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MaterialModule } from '../material/material/material.module';
 
 
 
@@ -15,6 +16,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     ContactUsRoutingModule,
     FormsModule,
+    MaterialModule,
     ReactiveFormsModule,
     SharedModule
   ]

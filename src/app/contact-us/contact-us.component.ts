@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import Swal from 'sweetalert2';
+import { MailService } from '../shared/services/mail.service';
 
 @Component({
   selector: 'app-contact-us',
@@ -11,7 +13,8 @@ export class ContactUsComponent implements OnInit{
   contactForm!: FormGroup;
 
   constructor(
-    private formBuilder:FormBuilder
+    private formBuilder:FormBuilder,
+    private mailService: MailService
   ){
 
   }
@@ -20,9 +23,6 @@ export class ContactUsComponent implements OnInit{
     this.contactForm = this.initForm();
   }
 
-  onSubmit(){
-
-  }
 
   initForm():FormGroup{
     return this.formBuilder.group({
@@ -32,6 +32,32 @@ export class ContactUsComponent implements OnInit{
       mail:['', [Validators.required, Validators.email]],
       comment:['', [Validators.required]],
     })
+  }
+
+  onSubmit(){
+
+    let formData:FormData = this.contactForm.value;
+
+    this.mailService.sendMessage(formData)
+    .subscribe(
+      (response)=>{
+        Swal.fire({
+          icon:'success',
+          title:'Se ha enviado exitosamente',
+          width: '250px',
+          confirmButtonColor:'#8318b4'
+        })
+      },
+      (error)=>{
+        Swal.fire({
+          icon:'success',
+          title:'Se ha enviado exitosamente',
+          width: '250px',
+          confirmButtonColor:'#8318b4'
+        })
+      }
+    )
+
   }
 
 

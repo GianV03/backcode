@@ -5,8 +5,7 @@ import { ServiceComponent } from './pages/service/service.component';
 import { MainServicesRoutingModule } from './main-services-routing.module';
 import { HighDescriptionCardsComponent } from './components/high-description-cards/high-description-cards.component';
 import { SharedModule } from '../shared/shared.module';
-
-
+import { MaterialModule } from '../material/material/material.module';
 
 @NgModule({
     declarations: [
@@ -17,6 +16,7 @@ import { SharedModule } from '../shared/shared.module';
     imports: [
         CommonModule,
         MainServicesRoutingModule,
+        MaterialModule,
         SharedModule
         
     ]

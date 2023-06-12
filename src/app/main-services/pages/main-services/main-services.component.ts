@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'main-services',
@@ -7,7 +7,6 @@ import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/co
 })
 export class MainServicesComponent implements OnInit{
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
   }
 
 

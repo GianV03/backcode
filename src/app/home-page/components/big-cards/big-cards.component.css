@@ -32,14 +32,8 @@
 }
 
 
-h1{
-    color: #000;  /* #254966 */
-}
-
-
 .home-page__big-card h3{
-    color:#4b0973;
-    font-family: Arial, Helvetica, sans-serif;
+    color:#4b0973 !important;
 }
 
 .home-page__big-card img{
@@ -50,7 +44,6 @@ h1{
 
 .home-page__big-card p{
     display: block;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 

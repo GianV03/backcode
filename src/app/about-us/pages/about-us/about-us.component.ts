@@ -31,17 +31,17 @@ export class AboutUsComponent implements AfterViewInit {
       }
     });
 
-    this.renderer.listen(window, 'scroll', ()=>{
-      this.misionVision.forEach((e)=>{
-        let position = e.nativeElement.getBoundingClientRect().top;
-        let screenHeight = window.innerHeight/2;
-        if(position < screenHeight){
-          this.renderer.setStyle(e.nativeElement, 'top', 0);
-        }else if(position >= screenHeight){
-          this.renderer.setStyle(e.nativeElement, 'top', '-20rem');
-        }
-      })
-    })
+    // this.renderer.listen(window, 'scroll', ()=>{
+    //   this.misionVision.forEach((e)=>{
+    //     let position = e.nativeElement.getBoundingClientRect().top;
+    //     let screenHeight = window.innerHeight/2;
+    //     if(position < screenHeight){
+    //       this.renderer.setStyle(e.nativeElement, 'top', 0);
+    //     }else if(position >= screenHeight){
+    //       this.renderer.setStyle(e.nativeElement, 'top', '-20rem');
+    //     }
+    //   })
+    // })
   }
 
 }

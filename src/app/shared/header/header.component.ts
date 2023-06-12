@@ -11,6 +11,7 @@ export class HeaderComponent implements OnInit, AfterViewInit{
   @ViewChild('header') header!: ElementRef;
   @ViewChild('navSection', {static:true}) navSection!: ElementRef;
   @ViewChild('menuIcon', {static:true}) menuIcon!:ElementRef;
+  @ViewChild('mainImage', {static:true}) mainImage!:ElementRef;
   constructor(
     private renderer: Renderer2
   ){
@@ -36,12 +37,16 @@ export class HeaderComponent implements OnInit, AfterViewInit{
     this.renderer.listen(window, 'scroll', ()=>{
       if(window.scrollY>0){
         this.renderer.setStyle(this.header.nativeElement,'background-color', 'white');
+        this.renderer.setAttribute(this.mainImage.nativeElement, 'src', '/assets/icons/logo/MORADO V1.png');
+        this.renderer.setStyle(this.menuIcon.nativeElement, 'filter', 'invert(0)');
         this.renderer.setStyle(this.header.nativeElement, 'box-shadow', 'rgba(149, 157, 165, 0.2) 0px 8px 24px');
         this.links.forEach(e=>{
           this.renderer.setStyle(e.nativeElement, 'color', 'black')
         });
 
       }else if(window.scrollY==0){
+        this.renderer.setAttribute(this.mainImage.nativeElement, 'src', '/assets/icons/logo/logo blanco.png');
+        this.renderer.setStyle(this.menuIcon.nativeElement, 'filter', 'invert(1)');
         this.renderer.removeStyle(this.header.nativeElement, 'background-color');
         this.renderer.removeStyle(this.header.nativeElement, 'box-shadow');
         this.links.forEach(e=>{

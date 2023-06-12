@@ -15,11 +15,11 @@ export class ShortDescriptionComponent implements OnInit{
   ngOnInit(): void {
     this.renderer.listen(window, 'scroll', ()=>{
       let position = this.descriptionImage.nativeElement.getBoundingClientRect().top;
-      let screenHeight = (window.innerHeight/1.5);
+      let screenHeight = (window.innerHeight/.2);
       if(position < screenHeight){
         this.renderer.setStyle(this.descriptionImage.nativeElement, 'top', 0)
       }
-      if(position > screenHeight){
+      if(window.scrollY == 0){
         this.renderer.setStyle(this.descriptionImage.nativeElement, 'top', '15rem')
       }
     })
