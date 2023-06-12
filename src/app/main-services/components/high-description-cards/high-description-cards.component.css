@@ -41,6 +41,7 @@ h1 {
 
 .service-description-wrapper p {
   color: black;
+  text-align: justify;
 }
 
 @media screen and (max-width: 800px) {
