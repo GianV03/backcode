@@ -1,7 +1,7 @@
 .main-services-section{
+    align-items: center;
     display: flex;
     flex-flow: column nowrap;
-    align-items: center;
     padding: 3rem 0 3rem 0;
 }
 
@@ -13,25 +13,25 @@
 }
 
 .main-services-service{
-    width: 31%;
-    min-width: 350px;
-    height:20rem;
-    box-shadow: 0px 0px 1px black;
     background-color: white;
-    margin: 1rem .2rem 0 .2rem;
+    box-shadow: 0px 0px 1px black;
     cursor:pointer;
+    height:20rem;
+    margin: 1rem .2rem 0 .2rem;
+    min-width: 350px;
     overflow: hidden;
+    width: 31%;
 }
 
 .main-services-service img{
-    width: 110%;
     height: 80%;
     transform: scale(1);
-    transition: transform 2s;
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     -ms-transform: scale(1);
     -o-transform: scale(1);
+    transition: transform 2s;
+    width: 110%;
 }
 
 .main-services-service h3{

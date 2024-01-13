@@ -1,15 +1,11 @@
 
 .home-page_reasons-section{
-    display: flex;
     align-items: center;
+    display: flex;
     flex-flow: column nowrap;
 }
 
-
-
-
 .project_item{
-    width: 200px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -18,6 +14,7 @@
     -moz-transition: opacity 1s;
     -ms-transition: opacity 1s;
     -o-transition: opacity 1s;
+    width: 200px;
 }
 
 .project_item img{

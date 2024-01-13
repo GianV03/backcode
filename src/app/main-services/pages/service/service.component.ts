@@ -20,6 +20,7 @@ export class ServiceComponent implements OnInit {
   }
 
   send(){
+      // message sending simulation (temporal)
     Swal.fire({
       icon:'success',
       title:'Se ha enviado exitosamente',

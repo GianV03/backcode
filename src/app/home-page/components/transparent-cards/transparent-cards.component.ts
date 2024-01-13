@@ -17,17 +17,28 @@ export class TransparentCardsComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
+
+    // set behaivor of items when scrolling (opacity)
     this.renderer.listen(window, 'scroll', ()=>{
+
       this.cards.forEach((e)=>{
+
         let position = e.nativeElement.getBoundingClientRect().top;
         let screenHeight = window.innerHeight/2;
+
         if(position < screenHeight){
           this.renderer.setStyle(e.nativeElement, 'opacity', 1);
-        }else if(position > screenHeight){
+        }
+        
+        else 
+        
+        if(position > screenHeight){
           this.renderer.setStyle(e.nativeElement, 'opacity', 0);
         }
-      })
-    })
+
+      });
+
+    });
   }
 
 }

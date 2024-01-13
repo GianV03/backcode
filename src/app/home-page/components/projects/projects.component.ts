@@ -16,16 +16,27 @@ export class ProjectsComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
+
     this.renderer.listen(window, 'scroll', ()=>{
+
+      // Sets the behavior of items when scrolling (opacity)
       this.projectItems.forEach((e)=>{
+
         let position = e.nativeElement.getBoundingClientRect().top;
         let screenHeight = window.innerHeight-60;
+
         if(position < screenHeight){
           this.renderer.setStyle(e.nativeElement, 'opacity', 1);
-        }else if(position > screenHeight){
+        }
+        
+        else 
+
+        if(position > screenHeight){
           this.renderer.setStyle(e.nativeElement, 'opacity', 0);
         }
-      })
-    })
+
+      });
+
+    });
   }
 }

@@ -19,29 +19,24 @@ export class AboutUsComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
+    
+    // set behaivor of items when scrolling (opacity)
     this.renderer.listen(window, 'scroll', ()=>{
+
       let position = this.AboutUsText.nativeElement.getBoundingClientRect().top;
       let screenHeight = window.innerHeight/2;
+
       if(position < screenHeight){
         this.renderer.setStyle(this.AboutUsText.nativeElement, 'opacity', 1);
-        this.renderer.setStyle(this.AboutUsImage.nativeElement, 'transform', 'rotate3d(1, 1, 1, 0)')
-      }else if(position > screenHeight){
-        this.renderer.setStyle(this.AboutUsText.nativeElement, 'opacity', 0)
-        this.renderer.setStyle(this.AboutUsImage.nativeElement, 'transform', 'rotate3d(1, 1, 1, 50deg)')
       }
+      
+      else 
+      
+      if(position > screenHeight){
+        this.renderer.setStyle(this.AboutUsText.nativeElement, 'opacity', 0);
+      }
+
     });
 
-    // this.renderer.listen(window, 'scroll', ()=>{
-    //   this.misionVision.forEach((e)=>{
-    //     let position = e.nativeElement.getBoundingClientRect().top;
-    //     let screenHeight = window.innerHeight/2;
-    //     if(position < screenHeight){
-    //       this.renderer.setStyle(e.nativeElement, 'top', 0);
-    //     }else if(position >= screenHeight){
-    //       this.renderer.setStyle(e.nativeElement, 'top', '-20rem');
-    //     }
-    //   })
-    // })
   }
-
 }

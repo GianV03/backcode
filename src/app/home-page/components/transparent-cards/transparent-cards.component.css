@@ -20,10 +20,9 @@ h3{
 }
 
 .work_with_backc-code_item{
+    align-items: center;
     display: flex;
     flex-flow: column nowrap;
-    align-items: center;
-    width: 300px;
     height: 300px;
     margin: 3rem 1rem 0 1rem;
     opacity: 0;
@@ -32,6 +31,7 @@ h3{
     -moz-transition: opacity 1s;
     -ms-transition: opacity 1s;
     -o-transition: opacity 1s;
+    width: 300px;
 }
 
 

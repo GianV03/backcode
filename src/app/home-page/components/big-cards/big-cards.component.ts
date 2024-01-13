@@ -16,10 +16,16 @@ export class BigCardsComponent implements OnInit, AfterViewInit{
   }
 
   ngAfterViewInit(): void {
+
+    // Set the behavior of the cards with the window scroll
     this.renderer.listen(window, 'scroll', ()=>{
+
       this.cards.forEach((e, i)=>{
+
         let position = e.nativeElement.getBoundingClientRect().top;
         let screenHeight = window.innerHeight/2;
+
+        // When the view reaches the card it slides and is displayed
         if(position < screenHeight){
           if(i % 2 === 0){
             this.renderer.setStyle(e.nativeElement,'left', 0);
@@ -27,6 +33,8 @@ export class BigCardsComponent implements OnInit, AfterViewInit{
             this.renderer.setStyle(e.nativeElement,'right', 0);
           }
         }
+
+        // when the view is higher than the card it slides and hides
         if(position > screenHeight){
           if(i % 2 === 0){
             this.renderer.setStyle(e.nativeElement,'left', '-300px');
@@ -34,8 +42,10 @@ export class BigCardsComponent implements OnInit, AfterViewInit{
             this.renderer.setStyle(e.nativeElement,'right', '-300px');
           }
         }
-      })
-    })
+
+      });
+
+    });
   }
   ngOnInit(): void {
 

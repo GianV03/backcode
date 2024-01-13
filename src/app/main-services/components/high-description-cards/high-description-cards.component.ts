@@ -18,6 +18,8 @@ export class HighDescriptionCardsComponent implements OnInit {
   }
 
   openService(service:string): void{
+
+    // opens dialog to contact about service
     const dialogRef = this.matDialog.open(ServiceComponent,{
       width:'450px',
       height:'500px',

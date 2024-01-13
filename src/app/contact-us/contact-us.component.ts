@@ -25,36 +25,43 @@ export class ContactUsComponent implements OnInit{
 
 
   initForm():FormGroup{
+
+    // build contact form
     return this.formBuilder.group({
       name:['', [Validators.required]],
       lastName:['', [Validators.required]],
       phone:['', [Validators.required]],
       mail:['', [Validators.required, Validators.email]],
       comment:['', [Validators.required]],
-    })
+    });
+
   }
 
   onSubmit(){
 
     let formData:FormData = this.contactForm.value;
 
+    // send mail through service
     this.mailService.sendMessage(formData)
     .subscribe(
+
       (response)=>{
         Swal.fire({
           icon:'success',
           title:'Se ha enviado exitosamente',
           width: '250px',
           confirmButtonColor:'#8318b4'
-        })
+        });
       },
+
       (error)=>{
         Swal.fire({
           icon:'success',
           title:'Se ha enviado exitosamente',
           width: '250px',
           confirmButtonColor:'#8318b4'
-        })
+        });
+
       }
     )
 
